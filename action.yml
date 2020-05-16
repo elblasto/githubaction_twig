@@ -1,0 +1,20 @@
+name: 'twig linter '
+description: 'Twig linter check'
+inputs:
+  paths:
+    description: 'Paths to check'
+    required: false
+    default: './templates'
+  enable_warnings:
+    description: 'Enable checking for warnings (-w)'
+    required: false
+    default: 'true'
+  twiglint_bin_path:
+    description: 'Path to twigcs binary'
+    required: false
+    default: 'twigcs'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.paths }}
