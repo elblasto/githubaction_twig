@@ -1,29 +1,29 @@
 PHP Code sniffer Github action
 =
-This action runs phpcs with Supercraft ruleset with github action
+This action runs twigcs with github action
 
 Usage
 -
 
 Add this code to `.github/workflows/main.yml` file.
 
-    name: PHPCS check
+    name: TWIGCS check
       on: push/pull_request
 
       jobs:
         phpcs:
-          name: PHPCS
+          name: TWIGCS
           runs-on: ubuntu-latest
           steps:
             - uses: actions/checkout@v2
             - name: PHPCS check
-              uses: supercraftshop/github-actions@master 
+              uses: elblasto/githubaction_twig@master
 
-By default php_cs checks the code in `modules` directory.
+By default twigcs checks the code in `templates` directory.
 You can pass a set of your own directories using `paths` input
 
-    - name: PHPCS check
-      uses: supercraftshop/github-actions@master
+    - name: TWIGCS check
+      uses: elblasto/githubaction_twig@master
       with:
         paths: './modules ./plugins ./any_other_dir
 
