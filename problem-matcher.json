@@ -5,11 +5,11 @@
       "severity": "error",
       "pattern": [
         {
-          "regexp": "^<file name=\"(?:\\/github\\/workspace\\/)?(.*)\">$",
+          "regexp": "^<file name=\"(?:\\/github\\/workspace\\/)?(.*)\">",
           "file": 1
         },
         {
-          "regexp": "<error column=\"(\\d*)\" line=\"(\\d*)\" severity=\"(error|warning)\" message=\"(.*)\" source=\"(.*)(\"\\/>+)$",
+          "regexp": "<error column=\"(\\d*)\" line=\"(\\d*)\" severity=\"(error|warning)\" message=\"(.*)\" source=\"(.*)(\"\\/>+)",
           "line": 1,
           "column": 2,
           "severity": 3,
