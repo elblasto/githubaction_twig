@@ -11,7 +11,7 @@ Add this code to `.github/workflows/main.yml` file.
       on: push/pull_request
 
       jobs:
-        phpcs:
+        twigcs:
           name: TWIGCS
           runs-on: ubuntu-latest
           steps:
