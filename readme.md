@@ -16,7 +16,7 @@ Add this code to `.github/workflows/main.yml` file.
           runs-on: ubuntu-latest
           steps:
             - uses: actions/checkout@v2
-            - name: PHPCS check
+            - name: TWIGCS check
               uses: elblasto/githubaction_twig@master
 
 By default twigcs checks the code in `templates` directory.
