@@ -1,4 +1,4 @@
-PHP Code sniffer Github action
+Twig Code sniffer Github action
 =
 This action runs twigcs with github action
 
