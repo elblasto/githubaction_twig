@@ -1,6 +1,5 @@
 <?php
 namespace supercraft;
-//require_once '../vendor/autoload.php';
 
 use Allocine\Twigcs\Ruleset\RulesetInterface;
 use Allocine\Twigcs\Rule;
