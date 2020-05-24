@@ -6,11 +6,19 @@ RUN apt-get update && apt-get install -y curl \
     git
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer global require friendsoftwig/twigcs
 
 COPY entrypoint.sh \
      problem-matcher.json \
+     index.twig \
      /action/
+
+COPY supercraft \
+     /root/.composer/supercraft
+
+COPY composer.json \
+     /root/.composer
+
+RUN composer global install
 
 RUN chmod +x /action/entrypoint.sh
 
