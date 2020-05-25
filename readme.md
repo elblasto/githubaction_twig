@@ -17,13 +17,13 @@ Add this code to `.github/workflows/main.yml` file.
           steps:
             - uses: actions/checkout@v2
             - name: TWIGCS check
-              uses: elblasto/githubaction_twig@master
+              uses: supercraftshop/github-actions-twig@master
 
 By default twigcs checks the code in `templates` directory.
 You can pass a set of your own directories using `paths` input
 
     - name: TWIGCS check
-      uses: elblasto/githubaction_twig@master
+      uses: supercraftshop/github-actions-twig@master
       with:
         paths: './modules ./plugins ./any_other_dir
 
