@@ -9,7 +9,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 COPY entrypoint.sh \
      problem-matcher.json \
-     index.twig \
      /action/
 
 COPY supercraft \
