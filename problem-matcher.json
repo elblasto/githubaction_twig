@@ -17,6 +17,25 @@
           "loop": true
         }
       ]
+    },
+
+    {
+      "owner": "phpcs",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^(.*\\.twig)$",
+          "file": 1
+        },
+        {
+          "regexp": "l\\.(\\d+)\\sc.(\\d+)\\s:\\s(ERROR|WARNING)\\s(.*)",
+          "line": 1,
+          "column": 2,
+          "severity": 3,
+          "message": 4,
+          "loop": true
+        }
+      ]
     }
   ]
 }

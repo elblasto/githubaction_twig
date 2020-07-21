@@ -1,0 +1,6 @@
+{% set bigMenuItems = menuItems|filter(mi => mi.bigFont.options[0].selected) %}
+{% set smallMenuItems = menuItems|filter(mi => not mi.bigFont.options[0].selected) %}
+{% set query = craft.entries()
+    .section('customerStories')
+    .relatedTo(category)
+    .limit(limit) %}

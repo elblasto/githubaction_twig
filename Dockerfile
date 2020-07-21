@@ -1,6 +1,6 @@
-FROM php:7.4-fpm
+FROM cytopia/phpcs:3
 
-RUN apt-get update && apt-get install -y curl \
+RUN apk update && apk add curl \
     zip \
     unzip \
     git
@@ -9,6 +9,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 COPY entrypoint.sh \
      problem-matcher.json \
+     index.twig \
      /action/
 
 COPY supercraft \
